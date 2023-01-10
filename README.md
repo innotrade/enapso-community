@@ -27,5 +27,7 @@ Authentication is required before the first request is executed. In Postman, you
 
 ## Additional Resources
 
+In addition to the API documentation and Postman collection provided in this repository, we have also created a comprehensive [wiki](https://github.com/innotrade/enapso-community/wiki) to guide you through using the ENAPSO SDK. The wiki includes detailed explanations of each microservice, along with step-by-step instructions and screenshots to help you get started quickly and easily. Whether you're new to ENAPSO or an experienced developer, the wiki is a valuable resource for understanding and using the SDK to its full potential. So, head over to the wiki for a deeper dive into the ENAPSO Community SDK's features and capabilities.
+
 For more information on the ENAPSO Community SDK and its capabilities, please visit the [INNOTRADE website](https://innotrade.com/). If you have any questions or need assistance, please reach out to our team by emailing support@innotrade.com. We're happy to help you get started with ENAPSO and start building your own Knowledge Graph applications.
 
