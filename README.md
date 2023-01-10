@@ -13,7 +13,7 @@ ENAPSO provides a variety of Knowledge Graph services via a standard REST API. T
 
 ## Getting Started
 
-For an easy start into the development of your own semantic applications, a free Postman collection with all API calls is available for download in this repository https://github.com/innotrade/enapso-community. 
+For an easy start into the development of your own semantic applications, a free Postman collection with all API calls is available for download in this repository.
 
 In addition to the collection with the API calls, a consumer and a maintainer environment are available for Postman. The consumer environment configures a user with read-only rights, the maintainer environment configures a user with roles for write operations and administrative functions.
 
