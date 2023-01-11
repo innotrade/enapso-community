@@ -2,7 +2,7 @@
 
 ENAPSO is a powerful platform for building Knowledge Graph applications, providing a wide range of microservices through a standard REST API. Our SDK makes it easy for developers to create, manage, and query knowledge graph data, enabling you to build intelligent and highly-connected applications.
 
-With the ENAPSO Community SDK, you'll have access to the following microservices:
+With the ENAPSO Community, you'll have access to the following microservices:
 
 | Microservice | Description |
 | --- | --- |
