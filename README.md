@@ -1,6 +1,6 @@
 # ENAPSO Community
 
-ENAPSO is a powerful platform for building Knowledge Graph applications, providing a wide range of microservices through a standard REST API. Our SDK makes it easy for developers to create, manage, and query knowledge graph data, enabling you to build intelligent and highly-connected applications.
+ENAPSO is a powerful platform for building Knowledge Graph applications, providing a wide range of microservices through a standard REST API. ENAPSO makes it easy for developers to create, manage, and query knowledge graph data, enabling you to build intelligent and highly-connected applications.
 
 With the ENAPSO Community, you'll have access to the following microservices:
 
@@ -20,18 +20,18 @@ With the ENAPSO Community, you'll have access to the following microservices:
 ## 🚀 Getting Started
 Are you ready to start building your own intelligent and highly-connected applications? Getting started with ENAPSO is easy! Simply download our free Postman collection with all API calls from this repository, and you'll be on your way.
 
-We've also included a **Consumer** and **Maintainer** environment for Postman. The **Consumer** environment provides read-only rights, allowing you to familiarize yourself with the SDK before diving in. The **Maintainer** environment, on the other hand, is available by request and provides additional roles for write operations and administrative functions. To request access to the Maintainer environment, simply email our support team at support@innotrade.de
+We've also included a **Consumer** environment for Postman. The **Consumer** environment provides read-only rights, allowing you to familiarize yourself with ENAPSO before diving in. This environment is perfect for testing and evaluating it before using it in your own applications.
 
+**If you're looking to get your own isolated tenant to work with your own data, you can request access to a tenant by filling out [this form](google.com) and our support team will assist you in setting it up.**
 
 ## 🔑 Authentication and Authorization
-Before diving in, authentication is required. With Postman, simply select the environment (Consumer or Maintainer), execute the login call, and the token returned in the response will automatically be stored in an environment variable. With that, ENAPSO is ready to process your first requests.
+Before diving in, authentication is required. With Postman, simply select the environment (Consumer or a custom one ), execute the login call, and the token returned in the response will automatically be stored in an environment variable. With that, ENAPSO is ready to process your first requests.
 
-Please note that the Consumer environment is configured with read-only rights, providing limited functionality of the APIs. If you are looking to access all the features and extended functionality of the SDK, please contact our dedicated support team at support@innotrade.de. Our team will be happy to assist you and help you take full advantage of our platform.
-
+Please note that the Consumer environment is configured with read-only rights, providing limited functionality of the APIs. If you are looking to access all the features and extended functionality of ENAPSO, please contact us by filling [this form](google.com) and requesting for your own tenant. Our team will be happy to assist you and help you take full advantage of our platform.
 
 ## 📙 Additional Resources
-Along with API documentation and Postman collection available in this repository, We also have created a comprehensive wiki to guide you through the use of ENAPSO SDK. The wiki includes detailed explanations of each microservice, along with step-by-step instructions and screenshots to help you get started quickly and easily. Whether you're new to ENAPSO or an experienced developer, the wiki is a valuable resource for understanding and using the SDK to its full potential.
+Along with API documentation and Postman collection available in this repository, We also have created a comprehensive wiki to guide you through the use of ENAPSO. The wiki includes detailed explanations of each microservice, along with step-by-step instructions and screenshots to help you get started quickly and easily. Whether you're new to ENAPSO or an experienced developer, the wiki is a valuable resource for understanding and using ENAPSO to its full potential.
 
 ## 📧 Contact Us
-For more information on the ENAPSO Community SDK and its capabilities, please visit the INNOTRADE website. If you have any questions or need assistance, please reach out to our team by emailing support@innotrade.com. We're happy to help you get started with ENAPSO and start building your own Knowledge Graph applications. Also, we are open to hearing all your queries related to the SDK and its usage on local environments and partnership opportunities."
+For more information on ENAPSO and its capabilities, please visit the INNOTRADE website. If you have any questions or need assistance, please reach out to our team by emailing support@innotrade.com. We're happy to help you get started with ENAPSO and start building your own Knowledge Graph applications. Also, we are open to hearing all your queries related to its usage on local environments and partnership opportunities."
 
