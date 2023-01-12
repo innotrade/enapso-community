@@ -5516,7 +5516,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"template\": \"http://ont.telekom.de/cia/sparql-template#SPARQLTemplate_8b1a5776-38e8-43d7-8999-405cb4e0b482\",\r\n    \"variables\": {\r\n        \"smartphone_name\": \"Apple\",\r\n        \"mobileTariff_name\": \"XS\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"template\":  \"http://ont.telekom.de/cia/sparql-template#SPARQLTemplate_d2f818b8-0199-46ab-bd8a-a02b670dbd6c\",\r\n    \"variables\": {\r\n        \"context\": \"\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5600,7 +5600,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"context\": \"TariffSmartphoneProduct\",\r\n    \"search\": [\r\n        {\r\n            \"criteria\": \"Price\",\r\n            \"goal\": \"good\"\r\n        },\r\n        {\r\n            \"context\": \"Smartphone\",\r\n            \"search\": [\r\n                {\r\n                    \"criteria\": \"Speed\",\r\n                    \"goal\": \"contains\",\r\n                    \"goalSpec\": {\r\n                        \"contains\": \"5G\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"context\": \"MobileTariff\",\r\n            \"search\": [\r\n                {\r\n                    \"criteria\": \"Volume\",\r\n                    \"goal\": \"maxValue\",\r\n                    \"goalSpec\": {\r\n                        \"maxValue\": \"30\",\r\n                        \"unit\": \"GigaByte\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"context\": \"MobileTariff\",\r\n    \"search\": [\r\n        {\r\n            \"criteria\": \"volume\",\r\n            \"goal\": \"maxValue\",\r\n            \"tolerance-absolute\": 50,\r\n            \"goalSpec\": {\r\n                \"value\": 10,\r\n                \"unit\": \"GB\"\r\n            }\r\n        },\r\n        {\r\n            \"criteria\": \"price\",\r\n            \"goal\": \"maxValue\",\r\n            \"goalSpec\": {\r\n                \"value\": 50,\r\n                \"unit\": \"Euro\"\r\n            }\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5615,6 +5615,55 @@
 							"path": [
 								"v1",
 								"create-and-execute-sparql-expression"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recommendations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-enapso-auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": \"MobileTariff\",\r\n    \"search\": [\r\n        {\r\n            \"criteria\": \"price\",\r\n            \"goal\": \"good\",\r\n            \"scoreSpec\": {\r\n                \"searchValue\": \"100\",\r\n                \"equation\":\"function divisionFunction(attributeValue,searchValue) { return (attributeValue/searchValue) }\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{namespace}}/v1/get-recommendations",
+							"host": [
+								"{{url}}{{namespace}}"
+							],
+							"path": [
+								"v1",
+								"get-recommendations"
 							]
 						}
 					},
