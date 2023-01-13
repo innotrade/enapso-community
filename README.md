@@ -7,7 +7,7 @@
   
    <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-client"><img src="https://img.shields.io/badge/ENAPSO-Client-green" /></a>
    <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-admin"><img src="https://img.shields.io/badge/ENAPSO-Admin-blue" /></a>
-   <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-clie"><img src="https://img.shields.io/badge/ENAPSO-Cli-yellow" /></a>
+   <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-cli"><img src="https://img.shields.io/badge/ENAPSO-CLI-yellow" /></a>
   <a href="https://github.com/innotrade/enapso-graphdb-client/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-blue" /></a>
   <a href="https://github.com/innotrade/enapso-graphdb-client/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/code-Conduct-orange" /></a>
   <br />
