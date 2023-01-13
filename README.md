@@ -1,4 +1,4 @@
-![ENAPSO](https://i.ibb.co/9V72QSp/community-2.png)
+![ENAPSO]()
 
 <div align="center">
   <h1><span style="font-weight:bold; color: #4299E1;">ENAPSO</span> ENAPSO Community</h1>
