@@ -22,12 +22,12 @@ Are you ready to start building your own intelligent and highly-connected applic
 
 We've also included a **Consumer** environment for Postman. The **Consumer** environment provides read-only rights, allowing you to familiarize yourself with ENAPSO before diving in. This environment is perfect for testing and evaluating it before using it in your own applications.
 
-**If you're looking to get your own isolated tenant to work with your own data, you can request access to a tenant by filling out [this form](google.com) and our support team will assist you in setting it up.**
+**If you're looking to get your own isolated tenant to work with your own data, you can request access to a tenant by filling out [this form](google.com) and our support team will assist you in setting it up.The tenant will be available as a 2-week trial for you to test the functionality.**
 
 ## 🔑 Authentication and Authorization
 Before diving in, authentication is required. With Postman, simply select the environment (Consumer or a custom one ), execute the login call, and the token returned in the response will automatically be stored in an environment variable. With that, ENAPSO is ready to process your first requests.
 
-Please note that the Consumer environment is configured with read-only rights, providing limited functionality of the APIs. If you are looking to access all the features and extended functionality of ENAPSO, please contact us by filling [this form](google.com) and requesting for your own tenant. Our team will be happy to assist you and help you take full advantage of our platform.
+Please note that the Consumer environment is configured with read-only rights, providing limited functionality of the APIs. If you are looking to access all the features and extended functionality of ENAPSO, please contact us by filling [this form](google.com) and requesting for your own tenant. Our team will be happy to assist you and help you take full advantage of our platform which would be available as a 2-week trial for you to test the functionality..
 
 ## 📙 Additional Resources
 Along with API documentation and Postman collection available in this repository, We also have created a comprehensive wiki to guide you through the use of ENAPSO. The wiki includes detailed explanations of each microservice, along with step-by-step instructions and screenshots to help you get started quickly and easily. Whether you're new to ENAPSO or an experienced developer, the wiki is a valuable resource for understanding and using ENAPSO to its full potential.
