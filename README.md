@@ -4,8 +4,10 @@
 
 <div align="center">
   <h1><span style="font-weight:bold; color: #4299E1;">ENAPSO</span> ENAPSO Community</h1>
-  <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-client"><img src="https://img.shields.io/npm/v/@innotrade/enapso-graphdb-client" /></a>
-  <a href="https://github.com/innotrade/enapso-graphdb-client/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/connect-Community-brightgreen" /></a>
+  
+   <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-client"><img src="https://img.shields.io/badge/ENAPSO-Client-green" /></a>
+   <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-admin"><img src="https://img.shields.io/badge/ENAPSO-Admin-blue" /></a>
+   <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-clie"><img src="https://img.shields.io/badge/ENAPSO-Cli-yellow" /></a>
   <a href="https://github.com/innotrade/enapso-graphdb-client/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-blue" /></a>
   <a href="https://github.com/innotrade/enapso-graphdb-client/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/code-Conduct-orange" /></a>
   <br />
