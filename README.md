@@ -3,7 +3,7 @@
 
 
 <div align="center">
-  <h1><span style="font-weight:bold; color: #4299E1;">ENAPSO</span> ENAPSO Community</h1>
+  <h1><span style="font-weight:bold; color: #4299E1;">ENAPSO</span> Community</h1>
   
    <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-client"><img src="https://img.shields.io/badge/ENAPSO-Client-green" /></a>
    <a href="https://www.npmjs.com/package/@innotrade/enapso-graphdb-admin"><img src="https://img.shields.io/badge/ENAPSO-Admin-blue" /></a>
