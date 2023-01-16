@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e5518bfe-a12e-422c-bade-1d09065f7bde",
+		"_postman_id": "88f8fdd6-15b5-46a0-bd49-a18787f9da45",
 		"name": "ENAPSO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "7183002"
@@ -201,7 +201,7 @@
 								{
 									"key": "fileName",
 									"type": "file",
-									"src": "/C:/Users/HP/git/enapso-ontologies/EnapsoDatatypes.owl"
+									"src": "/C:/Users/ashesh/git/enapso-dotnetpro/ontologies/dotnetpro_demo_ontology_2.owl"
 								},
 								{
 									"key": "format",
@@ -210,12 +210,12 @@
 								},
 								{
 									"key": "context",
-									"value": "http://ont.enapso.com/datatypes",
+									"value": "http://ont.enapso.com/dotnetpro",
 									"type": "text"
 								},
 								{
 									"key": "baseIRI",
-									"value": "http://ont.enapso.com/datatypes#",
+									"value": "http://ont.enapso.com/dotnetpro#",
 									"type": "text"
 								}
 							]
@@ -736,7 +736,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/foundation#Attribute\",\r\n            \"roles\": {\r\n                \"post\": \"attribute-create\",\r\n                \"get\": \"attribute-read\",\r\n                \"put\": \"attribute-update\",\r\n                \"delete\": \"attribute-delete\"\r\n            }\r\n        },\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/foundation#Capability\",\r\n            \"roles\": {\r\n                \"post\": \"capability-create\",\r\n                \"get\": \"capability-read\",\r\n                \"put\": \"capability-update\",\r\n                \"delete\": \"capability-delete\"\r\n            }\r\n        },\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/foundation#Resource\",\r\n            \"roles\": {\r\n                \"post\": \"resource-create\",\r\n                \"get\": \"resource-read\",\r\n                \"put\": \"resource-update\",\r\n                \"delete\": \"resource-delete\"\r\n            }\r\n        },\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/foundation#Argument\",\r\n            \"roles\": {\r\n                \"post\": \"argument-create\",\r\n                \"get\": \"argument-read\",\r\n                \"put\": \"argument-update\",\r\n                \"delete\": \"argument-delete\"\r\n            }\r\n        },\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/truck#Truck\",\r\n            \"roles\": {\r\n                \"post\": \"truck-create\",\r\n                \"get\": \"truck-read\",\r\n                \"put\": \"truck-update\",\r\n                \"delete\": \"truck-delete\"\r\n            }\r\n        }\r\n    ]\r\n}",
+									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/foundation#Attribute\",\r\n            \"roles\": {\r\n                \"post\": \"attribute-create\",\r\n                \"get\": \"attribute-read\",\r\n                \"put\": \"attribute-update\",\r\n                \"delete\": \"attribute-delete\"\r\n            }\r\n        },\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/foundation#Capability\",\r\n            \"roles\": {\r\n                \"post\": \"capability-create\",\r\n                \"get\": \"capability-read\",\r\n                \"put\": \"capability-update\",\r\n                \"delete\": \"capability-delete\"\r\n            }\r\n        },\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/foundation#Resource\",\r\n            \"roles\": {\r\n                \"post\": \"resource-create\",\r\n                \"get\": \"resource-read\",\r\n                \"put\": \"resource-update\",\r\n                \"delete\": \"resource-delete\"\r\n            }\r\n        },\r\n        {\r\n            \"cls\": \"http://ont.enapso.com/foundation#Argument\",\r\n            \"roles\": {\r\n                \"post\": \"argument-create\",\r\n                \"get\": \"argument-read\",\r\n                \"put\": \"argument-update\",\r\n                \"delete\": \"argument-delete\"\r\n            }\r\n        }\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1687,7 +1687,7 @@
 							"name": "Argument Management",
 							"item": [
 								{
-									"name": "Create a new Argument",
+									"name": "Create a new Attribute",
 									"event": [
 										{
 											"listen": "test",
@@ -2120,7 +2120,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{url}}{{namespace}}/v1/Resource?relation=parent2ChildInstanceRelation&iri=http%3A%2F%2Font.enapso.com%2Fmodel%2Fsoftware%2Fui-use-case%23Resource_c96ce9e3_f1d1_4dc4_a104_170a82d25f10",
+											"raw": "{{url}}{{namespace}}/v1/Resource?relation=parent2ChildInstanceRelation&iri=http%3A%2F%2Font.enapso.com%2Fmodel%2Fsoftware%2Fui-use-case%23Resource_69c94752_ce52_4d97_baca_078448224a59",
 											"host": [
 												"{{url}}{{namespace}}"
 											],
@@ -2135,7 +2135,7 @@
 												},
 												{
 													"key": "iri",
-													"value": "http%3A%2F%2Font.enapso.com%2Fmodel%2Fsoftware%2Fui-use-case%23Resource_c96ce9e3_f1d1_4dc4_a104_170a82d25f10"
+													"value": "http%3A%2F%2Font.enapso.com%2Fmodel%2Fsoftware%2Fui-use-case%23Resource_69c94752_ce52_4d97_baca_078448224a59"
 												}
 											]
 										}
@@ -2644,7 +2644,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"cls\": \"http://ont.telekom.de/cia/model#Smartphone\",\r\n    \"relation\": \"parent2ChildInstanceRelation\",\r\n    \"filter\": [\r\n        {\r\n            \"key\": \"$sparql\",\r\n            \"value\": \"regEx(str(?ind), \\\"http://ont.telekom.de/cia/data#Smartphone_456fe1a3_e809_42b3_9485_86d0c5c688cb\\\", \\\"i\\\")\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"cls\": \"http://ont.enapso.com/dotnetpro#Person\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2693,7 +2693,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"cls\": \"http://ont.enapso.com/truck#Truck\",\r\n    \"baseiri\":\"http://ont.enapso.com/truck#\",\r\n    \"records\": [\r\n        {\r\n            \"iri\":\"134\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"cls\": \"http://ont.enapso.com/dotnetpro#Person\",\r\n    \"baseiri\":\"http://ont.enapso.com/dotnetpro#\",\r\n    \"records\": [\r\n        {\r\n            \"givenname\":\"Ashesh\",\r\n            \"surname\":\"Goplani\"\r\n\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2742,7 +2742,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"cls\": \"http://ont.telekom.de/cia/model#Smartphone\",\r\n   \"records\": [\r\n      {\r\n         \"color\": \"Black\",\r\n         \"iri\": \"http://ont.telekom.de/cia/data#Smartphone_f22b8132_e7d5_4cfa_bcbc_2e93ddc7c6de\"\r\n      }\r\n   ]\r\n}",
+							"raw": "{\r\n   \"cls\": \"http://ont.enapso.com/dotnetpro#Person\",\r\n   \"records\": [\r\n      {\r\n         \"surname\": \"Jackson\",\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Person_f59376c1-1a63-4d27-a33b-ab356c380a02\"\r\n      }\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2791,7 +2791,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"child\": \"http://ont.enapso.com/truck#TransportationCompany5cfb2f42_500e_4856_9acb_80901669cb7f\",\r\n   \"parent\": \"http://ont.enapso.com/dotnetpro#Truck_04e79796-838b-4152-89bf-5e12efe7b38d\",\r\n   \"property\": \"http://ont.enapso.com/truck#hasOwner\"\r\n}",
+							"raw": "{\r\n   \"child\": \"http://ont.enapso.com/dotnetpro#Role_139a90cb_f8ed_48e5_afc5_7094ae132651\",\r\n   \"parent\": \"http://ont.enapso.com/dotnetpro#Person_8e7980b9_bec9_4e39_af50_a8f3e6c0d349\",\r\n   \"property\": \"http://ont.enapso.com/dotnetpro#hasRole\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2889,7 +2889,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Person\",\r\n   \"records\": [\r\n      {\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Person_7b9e5986-c0a8-41a8-bcaa-c732f9ea1d38\"\r\n      }\r\n   ]\r\n}",
+							"raw": "{\r\n   \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Person\",\r\n   \"records\": [\r\n      {\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Person_f59376c1-1a63-4d27-a33b-ab356c380a02\"\r\n      }\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4121,6 +4121,44 @@
 					"response": []
 				},
 				{
+					"name": "Get All Equivalent of a class",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-enapso-auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"cls\": \"http://ont.enapso.com/foundation#Attribute\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{namespace}}/v1/get-equivalent-classes",
+							"host": [
+								"{{url}}{{namespace}}"
+							],
+							"path": [
+								"v1",
+								"get-equivalent-classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Class Properties",
 					"request": {
 						"method": "POST",
@@ -4652,7 +4690,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"cls\": \"http://ont.enapso.com/truck#Truck\"\r\n\r\n}",
+							"raw": "{\r\n       \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#EditorialObject\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4713,7 +4751,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"cls\": \"http://ont.enapso.com/truck#Truck\",\r\n    \"baseiri\":\"http://ont.enapso.com/truck#\",\r\n    \"records\": [\r\n        {\r\n            \"iri\":\"134\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n   \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Person\",\r\n   \"records\": [\r\n      {\r\n         \"givenName\": \"Alexander\",\r\n         \"familyName\": \"Schulze\",\r\n         \"age\": 55\r\n\r\n      }\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4762,7 +4800,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"cls\": \"http://ont.enapso.com/truck#Truck\",\r\n    \"baseiri\":\"http://ont.enapso.com/truck#\",\r\n    \"records\": [\r\n        {\r\n            \"iri\":\"3456\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n   \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Person\",\r\n   \"records\": [\r\n      {\r\n         \"age\": 55,\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Truck_04e79796-838b-4152-89bf-5e12efe7b38d\"\r\n      }\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4936,480 +4974,13 @@
 			]
 		},
 		{
-			"name": "View Management Service",
+			"name": "CDK Backend Service",
 			"item": [
 				{
-					"name": "SPARQL Template Management Service",
-					"item": [
-						{
-							"name": "Read SPARQL Template",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/read-template",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"read-template"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Read SPARQL Template and assigned variable name",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"template\": \"http://ont.telekom.de/cia/sparql-template#SPARQLTemplate_3073bec8-3daa-41e2-b737-2dc22fc8466d\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/execute-template",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"execute-template"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create SPARQL Template",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#SPARQLTemplate_00a5e37f_3452_4b4ghj8\",\r\n            \"name\": \"getEntitiesSpecificInformation\",\r\n            \"template\": \" `select ?iri ?x where { ?iri ${y} ?x.}`\",\r\n            \"description\": \"Get all entities specific property \"\r\n        }\r\n    ]\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/create-template",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"create-template"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update an existing SPARQL Template",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/dotnetpro#SPARQLTemplate_9b85bdba-62a1-4850-854e-7fc5db0c7d4d\",\r\n            \"template\": \" `select ?tariffSmartphoneProduct_oneTimePrice_value ?tariffSmartphoneProduct_oneTimePrice_unit ?tariffSmartphoneProduct_monthlyPrice_value  ?tariffSmartphoneProduct_monthlyPrice_unit ?tariffSmartphoneProduct_duration_value ?tariffSmartphoneProduct_duration_unit ?smartphone_name_value ?smartphone_imageURL_value ?smartphone_marketingTeaser_value ?smartphone_actionButtonLabel_value ?smartphone_manufacturerName_Value ?smartphone_memorySize_value ?smartphone_memorySize_unit ?smartphone_screenResolution_value ?smartphone_screenResolution_unit ?smartphone_size_value ?smartphone_size_unit ?smartphone_weight_value ?smartphone_weight_unit ?smartphone_color_value ?smartphone_operatingSystem_value ?smartphone_processor_value ?smartphone_simCapacity_value (concat('[ ',group_concat(?smartphone_mobileCommunicationStandard_value;separator=', '),' ]') as ?smartphone_mobileCommunicationStandard_values) ?smartphone_backCameraResolution_value ?smartphone_backCameraResolution_unit ?smartphone_frontCameraResolution_value ?smartphone_frontCameraResolution_unit ?mobileTariff_name_value ?mobileTariff_mobileCommunicationStandard_value ?mobileTariff_dataVolume_value ?mobileTariff_dataVolume_unit ?mobileTariff_duration_value ?mobileTariff_duration_unit where { ?ind rdf:type ciam:TariffSmartphoneProduct.  ?ind ciam:hasDuration ?hasDuration1. ?hasDuration1 ciam:value ?tariffSmartphoneProduct_duration_value. ?hasDuration1 qudt:hasUnit ?hasUnit31. ?hasUnit31 rdfs:label ?tariffSmartphoneProduct_duration_unit. ?ind ciam:hasSmartphone ?hasSmartphone. optional { ?hasSmartphone ciam:hasManufacturer ?hasManufacturer.  ?hasManufacturer ciam:name ?smartphone_manufacturerName_Value. }. optional { ?hasSmartphone ciam:imageURL ?smartphone_imageURL_value }. optional {   ?hasSmartphone ciam:marketingTeaser ?smartphone_marketingTeaser_value  }.  optional {  ?hasSmartphone ciam:actionButtonLabel ?smartphone_actionButtonLabel_value }. optional { ?hasSmartphone ciam:hasMemorySize ?hasMemorySize. ?hasMemorySize ciam:value ?smartphone_memorySize_value. ?hasMemorySize qudt:hasUnit ?hasUnit10. ?hasUnit10 rdfs:label ?smartphone_memorySize_unit. }.  optional { ?hasSmartphone ciam:hasScreenResolution ?hasScreenResolution. ?hasScreenResolution ciam:value ?smartphone_screenResolution_value. ?hasScreenResolution qudt:hasUnit ?hasUnit2.  ?hasUnit2 rdfs:label ?smartphone_screenResolution_unit.  }.  optional { ?hasSmartphone ciam:hasSize ?hasSize. ?hasSize ciam:value ?smartphone_size_value. ?hasSize qudt:hasUnit ?hasUnit3.  ?hasUnit3 rdfs:label ?smartphone_size_unit.  }. optional {  ?hasSmartphone ciam:hasWeight ?hasWeight. ?hasWeight ciam:value ?smartphone_weight_value. ?hasWeight qudt:hasUnit ?hasUnit4. ?hasUnit4 rdfs:label ?smartphone_weight_unit. }. optional { ?hasSmartphone ciam:color ?smartphone_color_value     }.  optional {  ?hasSmartphone ciam:name ?smartphone_name_value     }.  optional { ?hasSmartphone ciam:operatingSystem ?smartphone_operatingSystem_value     }. optional {  ?hasSmartphone ciam:processor ?smartphone_processor_value     }.  optional {  ?hasSmartphone ciam:simCapacity ?smartphone_simCapacity_value   }.  optional { ?hasSmartphone ciam:hasMobileCommunicationStandard ?hasMobileCommunicationStandard. ?hasMobileCommunicationStandard rdfs:label ?smartphone_mobileCommunicationStandard_value.  }.  optional {  ?hasSmartphone ciam:hasBackCamera ?hasBackCamera.  ?hasBackCamera ciam:hasCameraResolution ?hasBackCameraResolution. ?hasBackCameraResolution ciam:value ?SmartphoneBackCameraResolution.  ?hasBackCameraResolution qudt:hasUnit ?hasUnit5.  ?hasUnit5 rdfs:label ?unitOfSmartphoneBackCameraResolution.  }. optional {  ?hasSmartphone ciam:hasFrontCamera ?hasFrontCamera.  ?hasFrontCamera ciam:hasCameraResolution ?hasFrontCameraResolution. ?hasFrontCameraResolution ciam:value ?SmartphoneFrontCameraResolution. ?hasFrontCameraResolution qudt:hasUnit ?hasUnit6.   ?hasUnit6 rdfs:label ?unitOfSmartphoneFrontCameraResolution. }. ?ind ciam:hasMobileTariff ?hasMobileTariff. optional { ?hasMobileTariff ciam:hasDataVolume ?hasDataVolume.  ?hasDataVolume ciam:value ?MobileTariffDataVolume. ?hasDataVolume qudt:hasUnit ?hasUnit12. ?hasUnit12 rdfs:label ?unitOfMobileTariffDataVolume.  }. optional { ?hasMobileTariff ciam:hasDuration ?hasDuration. ?hasDuration ciam:value ?MobileTariffDuration. ?hasDuration qudt:hasUnit ?hasUnit13. ?hasUnit13 rdfs:label ?unitOfMobileTariffDuration. }. optional { ?hasMobileTariff ciam:hasMobileCommunicationStandard ?hasTariffMobileCommunicationStandard.  ?hasTariffMobileCommunicationStandard rdfs:label ?MobileTariffMobileCommunicationStandard. }. ?ind ciam:hasPrice ?price. ?price rdf:type ciam:MonthlyPrice. ?price ciam:value ?monthlyPrice. ?price qudt:hasUnit ?hasUnit. ?hasUnit rdfs:label ?unitOfMonthlyPrice.{ ?ind ciam:hasPrice ?price1. ?price1 rdf:type ciam:OneTimePrice. ?price1 ciam:value ?oneTimePrice. ?price1 qudt:hasUnit ?hasUnit1.  ?hasUnit1 rdfs:label ?unitOfOneTimePrice. } optional { ?hasMobileTariff ciam:name ?MobileTariffName   }. ${filterStatement} } group by ?oneTimePrice ?unitOfOneTimePrice ?monthlyPrice  ?unitOfMonthlyPrice ?duration ?unitOfDuration ?SmartphoneName ?SmartphoneImageURL ?SmartphoneMarketingTeaser ?SmartphoneActionButtonLabel ?nameOfManufacturer ?SmartphoneMemorySize ?unitOfSmartphoneMemorySize ?SmartphoneScreenResolution ?unitOfSmartphoneScreenResolution ?SmartphoneSize ?unitOfSmartphoneSize ?SmartphoneWeight ?unitOfSmartphoneWeight ?SmartphoneColor ?SmartphoneOperatingSystem ?SmartphoneProcessor ?SmartphoneSimCapacity ?SmartphoneBackCameraResolution ?unitOfSmartphoneBackCameraResolution ?SmartphoneFrontCameraResolution ?unitOfSmartphoneFrontCameraResolution ?MobileTariffName ?MobileTariffMobileCommunicationStandard ?MobileTariffDataVolume ?unitOfMobileTariffDataVolume ?MobileTariffDuration ?unitOfMobileTariffDuration ${orderStatement}`\"\r\n        }\r\n    ]\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/update-template",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"update-template"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete an existing SPARQL Template",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#SPARQLTemplate_00a5e37f_3452_4b4ghj8\"\r\n        }\r\n    ]\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/delete-template",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"delete-template"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Variable Management Service",
-					"item": [
-						{
-							"name": "Read variable",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"filter\": [\r\n        {\r\n            \"key\": \"$sparql\",\r\n            \"value\": \"regEx(str(?ind), \\\"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\\\", \\\"i\\\")\"\r\n        }\r\n    ]\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/read-variable",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"read-variable"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create variable",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\",\r\n            \"name\": \"name\",\r\n            \"description\": \"pass predicate iri\"\r\n        }\r\n    ]\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/create-variable",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"create-variable"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update an existing variable",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\",\r\n            \"description\": \"pass the iri of predicate\"\r\n        }\r\n    ]\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/update-variable",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"update-variable"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete an existing variable",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-enapso-auth",
-										"value": "{{token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\"\r\n        }\r\n    ]\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}{{namespace}}/v1/delete-variable",
-									"host": [
-										"{{url}}{{namespace}}"
-									],
-									"path": [
-										"v1",
-										"delete-variable"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Add variable to SPARQL template",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
+					"name": "Generate and Save Open API Doc",
 					"request": {
 						"method": "POST",
 						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
 							{
 								"key": "x-enapso-auth",
 								"value": "{{token}}",
@@ -5418,7 +4989,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"template\": \"http://ont.enapso.com/views#SPARQLTemplate_00a5e37f_3452_4b4ghj8\",\r\n    \"variable\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5426,111 +4997,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}{{namespace}}/v1/add-variable-to-template",
+							"raw": "{{url}}{{namespace}}/v1/generate-and-save-open-api-specification",
 							"host": [
 								"{{url}}{{namespace}}"
 							],
 							"path": [
 								"v1",
-								"add-variable-to-template"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Remove variable from SPARQL template",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "x-enapso-auth",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"template\": \"http://ont.enapso.com/views#SPARQLTemplate_00a5e37f_3452_4b4ghj8\",\r\n    \"variable\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}{{namespace}}/v1/remove-variable-from-template",
-							"host": [
-								"{{url}}{{namespace}}"
-							],
-							"path": [
-								"v1",
-								"remove-variable-from-template"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Execute SPARQL Template",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "x-enapso-auth",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"template\":  \"http://ont.telekom.de/cia/sparql-template#SPARQLTemplate_d2f818b8-0199-46ab-bd8a-a02b670dbd6c\",\r\n    \"variables\": {\r\n        \"context\": \"\"\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}{{namespace}}/v1/execute-template",
-							"host": [
-								"{{url}}{{namespace}}"
-							],
-							"path": [
-								"v1",
-								"execute-template"
+								"generate-and-save-open-api-specification"
 							]
 						}
 					},
@@ -5544,149 +5017,12 @@
 						"type": "text/javascript",
 						"exec": [
 							"if(pm.environment.get(\"ngnix\") == \"false\"){",
-							"pm.collectionVariables.set(\"namespace\", \":3009\");",
-							"",
+							"pm.collectionVariables.set(\"namespace\", \":3007\");",
 							"}else{",
 							"",
-							"    pm.collectionVariables.set(\"namespace\", \"/enapso-dev/view-management\");",
+							"    pm.collectionVariables.set(\"namespace\", \"/enapso-dev/cdk-backend\");",
 							"",
-							"}",
-							"",
-							"",
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			]
-		},
-		{
-			"name": "Recommendation Assistant Service",
-			"item": [
-				{
-					"name": "Create and Execute SPARQL Expression",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "x-enapso-auth",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"context\": \"MobileTariff\",\r\n    \"search\": [\r\n        {\r\n            \"criteria\": \"volume\",\r\n            \"goal\": \"maxValue\",\r\n            \"tolerance-absolute\": 50,\r\n            \"goalSpec\": {\r\n                \"value\": 10,\r\n                \"unit\": \"GB\"\r\n            }\r\n        },\r\n        {\r\n            \"criteria\": \"price\",\r\n            \"goal\": \"maxValue\",\r\n            \"goalSpec\": {\r\n                \"value\": 50,\r\n                \"unit\": \"Euro\"\r\n            }\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}{{namespace}}/v1/create-and-execute-sparql-expression",
-							"host": [
-								"{{url}}{{namespace}}"
-							],
-							"path": [
-								"v1",
-								"create-and-execute-sparql-expression"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Recommendations",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "x-enapso-auth",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"context\": \"MobileTariff\",\r\n    \"search\": [\r\n        {\r\n            \"criteria\": \"price\",\r\n            \"goal\": \"good\",\r\n            \"scoreSpec\": {\r\n                \"searchValue\": \"100\",\r\n                \"equation\":\"function divisionFunction(attributeValue,searchValue) { return (attributeValue/searchValue) }\"\r\n            }\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}{{namespace}}/v1/get-recommendations",
-							"host": [
-								"{{url}}{{namespace}}"
-							],
-							"path": [
-								"v1",
-								"get-recommendations"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"if(pm.environment.get(\"ngnix\") == \"false\"){",
-							"pm.collectionVariables.set(\"namespace\", \":3010\");",
-							"",
-							"}else{",
-							"",
-							"    pm.collectionVariables.set(\"namespace\", \"/enapso-dev/recommendation-assistant\");",
-							"",
-							"}",
-							"",
-							"",
-							""
+							"}"
 						]
 					}
 				},
