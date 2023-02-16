@@ -1,0 +1,21 @@
+
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: enapso-config
+data:
+  host: localhost/[your host]
+  schemes: https
+  security_authentication: keycloak
+  security_authorization: keycloak
+  graphdb_cache: local
+  graphdb_dbUrl: http://graphdb:7200
+  graphdb_triplestore: graphdb
+  graphdb_schema: enapso-system
+  graphdb_user: admin
+  graphdb_pass: root
+  keycloak_host: http://keycloak:8080
+  redis_host: redis-master
+  redis_port: "6379"
+  redis_password: <your password>
+  graphdb_namedGraph: http://ont.enapso.com/enapso-sparql-templates

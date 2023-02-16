@@ -1,0 +1,57 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphdb
+spec:
+  selector:
+    matchLabels:
+      run: graphdb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: graphdb
+    spec:
+      containers:
+      - name: graphdb
+        image: khaller/graphdb-free:10.0.3
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 7200
+        env:
+        - name: GDB_HEAP_SIZE
+          value: 4G
+        volumeMounts:
+          - mountPath: /opt/graphdb/data
+            name: graph-data-claim
+      volumes:
+      - name: graph-data-claim
+        persistentVolumeClaim:
+          claimName: graph-data-claim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: graphdb
+  labels:
+    run: graphdb
+spec:
+  ports:
+  - port: 7200
+    protocol: TCP
+  selector:
+    run: graphdb
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: graph-data-claim
+spec:
+  storageClassName: gp2
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi

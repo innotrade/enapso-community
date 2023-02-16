@@ -1,0 +1,374 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: individual-management
+spec:
+  selector:
+    matchLabels:
+      run: individual-management
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: individual-management
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: individual-management
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/individual-management:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: individual-management
+  labels:
+    run: individual-management
+spec:
+  ports:
+  - port: 3001
+    protocol: TCP
+    targetPort: 3001
+  type: NodePort
+  selector:
+    run: individual-management
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ontology-management
+spec:
+  selector:
+    matchLabels:
+      run: ontology-management
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: ontology-management
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: ontology-management
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/ontology-management:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3002
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ontology-management
+  labels:
+    run: ontology-management
+spec:
+  ports:
+  - port: 3002
+    protocol: TCP
+    targetPort: 3002
+  type: NodePort
+  selector:
+    run: ontology-management
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-assistant
+spec:
+  selector:
+    matchLabels:
+      run: api-assistant
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: api-assistant
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: api-assistant
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/api-assistant:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3005
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-assistant
+  labels:
+    run: api-assistant
+spec:
+  ports:
+  - port: 3005
+    protocol: TCP
+    targetPort: 3005
+  type: NodePort
+  selector:
+    run: api-assistant
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tenant-management
+spec:
+  selector:
+    matchLabels:
+      run: tenant-management
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: tenant-management
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: tenant-management
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/tenant-management:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        env:
+          - name: HOST
+            value: "enapso.innotrade.com"
+          - name: SCHEMES
+            value: "https"
+        ports:
+        - containerPort: 3004
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenant-management
+  labels:
+    run: tenant-management
+spec:
+  ports:
+  - port: 3004
+    protocol: TCP
+    targetPort: 3004
+  type: NodePort
+  selector:
+    run: tenant-management
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cache-management
+spec:
+  selector:
+    matchLabels:
+      run: cache-management
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: cache-management
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: cache-management
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/cache-management:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cache-management
+  labels:
+    run: cache-management
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
+  type: NodePort
+  selector:
+    run: cache-management
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphdb-management
+spec:
+  selector:
+    matchLabels:
+      run: graphdb-management
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: graphdb-management
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: graphdb-management
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/graphdb-management:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3006
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: graphdb-management
+  labels:
+    run: graphdb-management
+spec:
+  ports:
+  - port: 3006
+    protocol: TCP
+    targetPort: 3006
+  type: NodePort
+  selector:
+    run: graphdb-management
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sparql-assistant
+spec:
+  selector:
+    matchLabels:
+      run: sparql-assistant
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: sparql-assistant
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: sparql-assistant
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/sparql-assistant:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3003
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sparql-assistant
+  labels:
+    run: sparql-assistant
+spec:
+  ports:
+  - port: 3003
+    protocol: TCP
+    targetPort: 3003
+  type: NodePort
+  selector:
+    run: sparql-assistant
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: view-management
+spec:
+  selector:
+    matchLabels:
+      run: view-management
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: view-management
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: view-management
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/view-management:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3009
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: view-management
+  labels:
+    run: view-management
+spec:
+  ports:
+  - port: 3009
+    protocol: TCP
+    targetPort: 3009
+  type: NodePort
+  selector:
+    run: view-management
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation-assistant
+spec:
+  selector:
+    matchLabels:
+      run: recommendation-assistant
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: recommendation-assistant
+    spec:
+      imagePullSecrets:
+      - name: gitlab-registry-enapso-sdk
+      containers:
+      - name: recommendation-assistant
+        image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/recommendation-assistant:latest
+        envFrom:
+          - configMapRef:
+                name: enapso-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3010
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommendation-assistant
+  labels:
+    run: recommendation-assistant
+spec:
+  ports:
+  - port: 3010
+    protocol: TCP
+    targetPort: 3010
+  type: NodePort
+  selector:
+    run: recommendation-assistant

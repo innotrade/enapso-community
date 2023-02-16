@@ -1,0 +1,83 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/certificate-arn: <your-certificate-arn>
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
+    alb.ingress.kubernetes.io/group.name: enapso-ingress
+    alb.ingress.kubernetes.io/group.order: '4'
+    alb.ingress.kubernetes.io/target-type: instance
+  name: sdk
+spec:
+  rules:
+  - host: <your-domain>
+    http:
+      paths:
+      - backend:
+          service:
+            name: individual-management
+            port:
+              number: 3001
+        path: /enapso-dev/individual-management/*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: sparql-assistant
+            port:
+              number: 3003
+        path: /enapso-dev/sparql-assistant/*
+        pathType: ImplementationSpecific  
+      - backend:
+          service:
+            name: ontology-management
+            port:
+              number: 3002
+        path: /enapso-dev/ontology-management/*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: api-assistant
+            port:
+              number: 3005
+        path: /enapso-dev/api-assistant/*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: tenant-management
+            port:
+              number: 3004
+        path: /enapso-dev/tenant-management/*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: cache-management
+            port:
+              number: 3000
+        path: /enapso-dev/cache-management/*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: graphdb-management
+            port:
+              number: 3006
+        path: /enapso-dev/graphdb-management/*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: view-management
+            port:
+              number: 3009
+        path: /enapso-dev/view-management/*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: recommendation-assistant
+            port:
+              number: 3010
+        path: /enapso-dev/recommendation-assistant/*
+        pathType: ImplementationSpecific
+
+
