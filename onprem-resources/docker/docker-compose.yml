@@ -1,0 +1,316 @@
+version: '3'
+networks:
+  isolated-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
+
+services:
+  redis-master:
+    container_name: redis-master
+    image: redis:6.2.7
+    command: redis-server --requirepass ${redis_password}
+    networks:
+      - isolated-network
+    ports:
+      - 6379:6379
+  postgres:
+    image: postgres:15.1
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${postgres_db}
+      POSTGRES_USER: ${postgres_user}
+      POSTGRES_PASSWORD: ${postgres_password}
+    networks:
+      - isolated-network
+  keycloak:
+    container_name: keycloak
+    image: jboss/keycloak:16.1.1
+    networks:
+      - isolated-network
+    volumes:
+      - ./keycloak:/opt/jboss/keycloak/imports
+    environment:
+      KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/demo-tenant.json -Dkeycloak.profile.feature.upload_scripts=enabled
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: ${postgres_db}
+      DB_USER: ${postgres_user}
+      DB_SCHEMA: public
+      DB_PASSWORD: ${postgres_password}
+      KEYCLOAK_USER: ${keycloak_username}
+      KEYCLOAK_PASSWORD: ${keycloak_password}
+      KEYCLOAK_FRONTEND_URL: ${keycloak_frontend_url}
+      PROXY_ADDRESS_FORWARDING: "true" #important for reverse proxy
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+  graphdb:
+    container_name: graphdb
+    image: khaller/graphdb-free:10.0.3
+    environment:
+      - GDB_HEAP_SIZE=4G
+    restart: always
+    ports:
+      - "7200:7200"
+    networks:
+      - isolated-network
+    volumes:
+      - ./graphdb/data:/opt/graphdb/data
+    entrypoint: []
+    command: /opt/graphdb/bin/graphdb
+  cache-management-service:
+    container_name: cms
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/cache-management:latest
+    volumes:
+      - ./services/cache-management:/app/services/cache-management:ro
+    ports:
+      - 3000:3000
+    depends_on:
+      - graphdb
+      - keycloak
+    links:
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  individual-management-service:
+    container_name: ims
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/individual-management:latest
+    environment:
+      host: ${host}
+      schemes: ${schemes}
+      security_authentication: ${security_authentication}
+      security_authorization: ${security_authorization}
+      graphdb_cache: ${graphdb_cache}
+      graphdb_dbUrl: ${graphdb_dbUrl}
+      graphdb_triplestore: ${graphdb_triplestore}
+      graphdb_schema: ${graphdb_schema}
+      graphdb_user: ${graphdb_user}
+      graphdb_pass: ${graphdb_pass}
+      keycloak_host: ${keycloak_host}
+      redis_host: ${redis_host}
+      redis_port: ${redis_port}
+      redis_password: ${redis_password}
+    volumes:
+      - ./services/individual-management:/app/services/individual-management:ro
+    ports:
+      - 3001:3001
+    depends_on:
+      - graphdb
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  sparql-assistant-service:
+    container_name: sas
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/sparql-assistant:latest
+    environment:
+      host: ${host}
+      schemes: ${schemes}
+      security_authentication: ${security_authentication}
+      security_authorization: ${security_authorization}
+      graphdb_cache: ${graphdb_cache}
+      graphdb_dbUrl: ${graphdb_dbUrl}
+      graphdb_triplestore: ${graphdb_triplestore}
+      graphdb_schema: ${graphdb_schema}
+      graphdb_user: ${graphdb_user}
+      graphdb_pass: ${graphdb_pass}
+      keycloak_host: ${keycloak_host}
+      redis_host: ${redis_host}
+      redis_port: ${redis_port}
+      redis_password: ${redis_password}
+    volumes:
+      - ./services/sparql-assistant:/app/services/sparql-assistant:ro
+    ports:
+      - 3003:3003
+    depends_on:
+      - graphdb
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  ontology-management-service:
+    container_name: oms
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/ontology-management:latest
+    environment:
+      host: ${host}
+      schemes: ${schemes}
+      security_authentication: ${security_authentication}
+      security_authorization: ${security_authorization}
+      graphdb_cache: ${graphdb_cache}
+      graphdb_dbUrl: ${graphdb_dbUrl}
+      graphdb_triplestore: ${graphdb_triplestore}
+      graphdb_schema: ${graphdb_schema}
+      graphdb_user: ${graphdb_user}
+      graphdb_pass: ${graphdb_pass}
+      keycloak_host: ${keycloak_host}
+      redis_host: ${redis_host}
+      redis_port: ${redis_port}
+      redis_password: ${redis_password}
+    volumes:
+      - ./services/ontology-management:/app/services/ontology-management:ro
+    ports:
+      - 3002:3002
+    depends_on:
+      - graphdb
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  tenant-management-service:
+    container_name: tms
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/tenant-management:latest
+    environment:
+      host: ${host}
+      schemes: ${schemes}
+      security_authentication: ${security_authentication}
+      security_authorization: ${security_authorization}
+      graphdb_cache: ${graphdb_cache}
+      graphdb_dbUrl: ${graphdb_dbUrl}
+      graphdb_triplestore: ${graphdb_triplestore}
+      graphdb_schema: ${graphdb_schema}
+      graphdb_user: ${graphdb_user}
+      graphdb_pass: ${graphdb_pass}
+      keycloak_host: ${keycloak_host}
+      keycloak_username: ${keycloak_username}
+      keycloak_password: ${keycloak_password}
+      redis_host: ${redis_host}
+      redis_port: ${redis_port}
+      redis_password: ${redis_password}
+    volumes:
+      - ./services/tenant-management:/app/services/tenant-management:ro
+    ports:
+      - 3004:3004
+    depends_on:
+      - graphdb
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  api-assistant-service:
+    container_name: ass
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/api-assistant:latest
+    environment:
+      host: ${host}
+      schemes: ${schemes}
+      security_authentication: ${security_authentication}
+      security_authorization: ${security_authorization}
+      graphdb_cache: ${graphdb_cache}
+      graphdb_dbUrl: ${graphdb_dbUrl}
+      graphdb_triplestore: ${graphdb_triplestore}
+      graphdb_schema: ${graphdb_schema}
+      graphdb_user: ${graphdb_user}
+      graphdb_pass: ${graphdb_pass}
+      keycloak_host: ${keycloak_host}
+      redis_host: ${redis_host}
+      redis_port: ${redis_port}
+      redis_password: ${redis_password}
+    volumes:
+      - ./services/api-assistant:/app/services/api-assistant:ro
+    ports:
+      - 3005:3005
+    depends_on:
+      - graphdb
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  graphdb-management-service:
+    container_name: gms
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/graphdb-management:latest
+    environment:
+      host: ${host}
+      schemes: ${schemes}
+      security_authentication: ${security_authentication}
+      security_authorization: ${security_authorization}
+      graphdb_cache: ${graphdb_cache}
+      graphdb_dbUrl: ${graphdb_dbUrl}
+      graphdb_triplestore: ${graphdb_triplestore}
+      graphdb_schema: ${graphdb_schema}
+      graphdb_user: ${graphdb_user}
+      graphdb_pass: ${graphdb_pass}
+      keycloak_host: ${keycloak_host}
+      redis_host: ${redis_host}
+      redis_port: ${redis_port}
+      redis_password: ${redis_password}
+    volumes:
+      - ./services/graphdb-management:/app/services/graphdb-management:ro
+    ports:
+      - 3006:3006
+    depends_on:
+      - graphdb
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  view-management-service:
+    container_name: vms
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/view-management:latest
+    environment:
+      host: ${host}
+      schemes: ${schemes}
+      security_authentication: ${security_authentication}
+      security_authorization: ${security_authorization}
+      graphdb_cache: ${graphdb_cache}
+      graphdb_dbUrl: ${graphdb_dbUrl}
+      graphdb_triplestore: ${graphdb_triplestore}
+      graphdb_schema: ${graphdb_schema}
+      graphdb_user: ${graphdb_user}
+      graphdb_pass: ${graphdb_pass}
+      keycloak_host: ${keycloak_host}
+      redis_host: ${redis_host}
+      redis_port: ${redis_port}
+      redis_password: ${redis_password}
+    volumes:
+      - ./services/view-management:/app/services/view-management:ro
+    ports:
+      - 3009:3009
+    depends_on:
+      - graphdb
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  recommendation-assistant-service:
+    container_name: ras
+    image: 19459-gitlab-85d53-registry.nws.netways.de/innotrade/all-projects/enapso-sdk/services/recommendation-assistant:latest
+    environment:
+      host: ${host}
+      schemes: ${schemes}
+      security_authentication: ${security_authentication}
+      security_authorization: ${security_authorization}
+      graphdb_cache: ${graphdb_cache}
+      graphdb_dbUrl: ${graphdb_dbUrl}
+      graphdb_triplestore: ${graphdb_triplestore}
+      graphdb_schema: ${graphdb_schema}
+      graphdb_user: ${graphdb_user}
+      graphdb_pass: ${graphdb_pass}
+      keycloak_host: ${keycloak_host}
+      redis_host: ${redis_host}
+      redis_port: ${redis_port}
+      redis_password: ${redis_password}
+    volumes:
+      - ./services/recommendation-assistant:/app/services/recommendation-assistant:ro
+    ports:
+      - 3010:3010
+    depends_on:
+      - graphdb
+      - keycloak
+      - redis-master
+    networks:
+      - isolated-network
+  nginx:
+    image: nginx:1.22.1
+    container_name: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - isolated-network
+    ports:
+      - 80:80
+      - 443:443
