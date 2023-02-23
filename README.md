@@ -45,16 +45,30 @@ With the ENAPSO Community, you'll have access to the following microservices:
 
 
 ## 🚀 Getting Started
-Are you ready to start building your own intelligent and highly-connected applications? Getting started with ENAPSO is easy! Simply download our free Postman collection with all API calls from this repository, and you'll be on your way.
 
-We've also included a **Consumer** environment for Postman. The **Consumer** environment provides read-only rights, allowing you to familiarize yourself with ENAPSO before diving in. This environment is perfect for testing and evaluating it before using it in your own applications.
+To get started with ENAPSO, follow these simple steps:
 
-**If you're looking to get your own isolated tenant to work with your own data, you can request access to a tenant by filling out [this form](google.com) and our support team will assist you in setting it up.The tenant will be available as a 2-week trial for you to test the functionality.**
+1. Download our free Postman collection with all API calls from this [this link](https://raw.githubusercontent.com/innotrade/enapso-community/main/ENAPSO.postman_collection.json). You can also find it in the root directory of our GitHub page.
+2. Select the appropriate environment based on your requirements:
+    * If you want to test the functionalities of our platform, use the **Consumer** environment. This environment provides read-only rights and is perfect for testing and evaluating ENAPSO before using it in your own applications.
+    * If you want your own isolated tenant to work with your own data, fill out [this form](https://www.innotrade.com/enapso-tenant-registration) to request access to a tenant. Our support team will assist you in setting it up, and the tenant will be available as a 2-week trial for you to test the functionality.
+    * If you want to operate ENAPSO on-premises, such as running it locally in your own Docker Compose or Kubernetes environment, contact us at support@innotrade.de, and we can provide you with the credentials to access the images through our container registry. To learn more about how you can deploy ENAPSO services locally, you can follow this [link](https://github.com/innotrade/enapso-community/wiki/ENAPSO-Platform-Services-on-On-Premises-Solutions-with-Kubernetes-and-Docker-Compose).
+3. Authenticate yourself by executing the login call. The token returned in the response will automatically be stored in an environment variable.
+4. You're all set! Start building your own intelligent and highly-connected applications using ENAPSO.
+
+**Note:** If you need help with importing Postman collections and environments, you can refer to the documentation available in this [link](https://github.com/innotrade/enapso-community/wiki/Importing-Postman-Collections-&-Environments).
 
 ## 🔑 Authentication and Authorization
-Before diving in, authentication is required. With Postman, simply select the environment (Consumer or a custom one ), execute the login call, and the token returned in the response will automatically be stored in an environment variable. With that, ENAPSO is ready to process your first requests.
 
-Please note that the Consumer environment is configured with read-only rights, providing limited functionality of the APIs. If you are looking to access all the features and extended functionality of ENAPSO, please contact us by filling [this form](google.com) and requesting for your own tenant. Our team will be happy to assist you and help you take full advantage of our platform which would be available as a 2-week trial for you to test the functionality..
+Authentication is required before you can use ENAPSO. To authenticate yourself, follow these steps:
+
+1. Select the environment you want to use (Consumer or a custom one).
+2. Execute the login call.
+3. The token returned in the response will automatically be stored in an environment variable.
+
+Please note that the Consumer environment is configured with read-only rights, providing limited functionality of the APIs. If you are looking to access all the features and extended functionality of ENAPSO, please fill out [this form](https://www.innotrade.com/enapso-tenant-registration) and request your own tenant. Our team will be happy to assist you and help you take full advantage of our platform which would be available as a 2-week trial for you to test the functionality.
+
+For any queries related to ENAPSO's usage on local environments and partnership opportunities, contact us at support@innotrade.de
 
 ## 📙 Additional Resources
 Along with API documentation and Postman collection available in this repository, We also have created a comprehensive wiki to guide you through the use of ENAPSO. The wiki includes detailed explanations of each microservice, along with step-by-step instructions and screenshots to help you get started quickly and easily. Whether you're new to ENAPSO or an experienced developer, the wiki is a valuable resource for understanding and using ENAPSO to its full potential.
