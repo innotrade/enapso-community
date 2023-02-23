@@ -47,6 +47,7 @@ With the ENAPSO Community, you'll have access to the following microservices:
 ## 🚀 Getting Started
 
 To get started with ENAPSO, follow these simple steps:
+<a id="raw-url" href="https://raw.githubusercontent.com/innotrade/enapso-community/main/ENAPSO.postman_collection.json">Download FILE</a>
 
 <a href="https://raw.githubusercontent.com/innotrade/enapso-community/main/ENAPSO.postman_collection.json" download>Click to Download</a>
 1. Download our free Postman collection with all API calls from this [this link](https://raw.githubusercontent.com/innotrade/enapso-community/main/ENAPSO.postman_collection.json). You can also find it in the root directory of our GitHub page.
