@@ -50,7 +50,7 @@ Copy code
 
 To get started with ENAPSO, follow these simple steps:
 
-1. Download our free Postman collection with all API calls from this [ENAPSO Postman Collection](https://raw.githubusercontent.com/innotrade/enapso-community/main/ENAPSO.postman_collection.json). To download, click on the link and then right-click select "Save As" to save the file to your computer. You can also find it in the root directory of our GitHub page.
+1. Download our free Postman collection with all API calls from this [ENAPSO Postman Collection](https://raw.githubusercontent.com/innotrade/enapso-community/main/ENAPSO.postman_collection.json). To download, click on the link and then right-click select "Save As" to save the file to your computer's Downloads folder. You can also find it in the root directory of our GitHub page.
 
 2. Select the appropriate environment based on your requirements:
     * If you want to test the functionalities of our platform, use the  [**Consumer Environment**](https://raw.githubusercontent.com/innotrade/enapso-community/main/ENAPSO-Cloud%20(Consumer).postman_environment.json)(open the link and then right-click select "Save As" to save the file). This environment provides read-only rights and is perfect for testing and evaluating ENAPSO before using it in your own applications. Note that this environment is running in our cloud.
