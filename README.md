@@ -14,9 +14,9 @@
   <br />
   <a href="https://www.innotrade.com/">Website</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://github.com/innotrade/enapso-graphdb-client/wiki">Documentation</a>
+  <a href="https://github.com/innotrade/enapso-community/wiki">Documentation</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://github.com/innotrade/enapso-graphdb-client/discussions">Discussion</a>
+  <a href="https://github.com/innotrade/enapso-community/discussions">Discussion</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="#">Facebook</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
