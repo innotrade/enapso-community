@@ -44,8 +44,6 @@ With the ENAPSO Community, you'll have access to the following microservices:
 |🔜  Quality Management    | Coming soon! - Ensure the integrity and accuracy of your data with this service which will prevent insertion of incorrect data, ensuring that your data is always of the highest quality. We look forward to sharing this new development with you in the near future                                                                                                                                                                                                                                                                                                        |
 
 
-markdown
-Copy code
 ## 🚀 Getting Started
 
 To get started with ENAPSO, follow these simple steps:
