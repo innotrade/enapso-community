@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "88f8fdd6-15b5-46a0-bd49-a18787f9da45",
+		"_postman_id": "ebdc223a-c2c3-4370-b99f-aab927bf2f46",
 		"name": "ENAPSO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "7183002"
@@ -457,82 +457,6 @@
 					"response": []
 				},
 				{
-					"name": "Create Database",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "x-enapso-auth",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"schema\": \"Test-Respository\",\r\n  \"title\":\"ENAPSO Test Respository\",\r\n  \"isShacl\":true,\r\n  \"ruleset\":\"rdfsplus-optimized\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}{{namespace}}/v1/create-database",
-							"host": [
-								"{{url}}{{namespace}}"
-							],
-							"path": [
-								"v1",
-								"create-database"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Database",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "x-enapso-auth",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"schema\": \"Test-Respository\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}{{namespace}}/v1/delete-database",
-							"host": [
-								"{{url}}{{namespace}}"
-							],
-							"path": [
-								"v1",
-								"delete-database"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Create Database User",
 					"request": {
 						"method": "POST",
@@ -565,82 +489,6 @@
 							"path": [
 								"v1",
 								"create-database-user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Database User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "x-enapso-auth",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"authorities\": [\r\n    \"WRITE_REPO_Test\",\r\n    \"READ_REPO_Test\",\r\n    \"ROLE_USER\"\r\n  ],\r\n  \"userName\": \"TestUser\",\r\n  \"password\": \"TestUser\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}{{namespace}}/v1/update-database-user",
-							"host": [
-								"{{url}}{{namespace}}"
-							],
-							"path": [
-								"v1",
-								"update-database-user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Database User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "x-enapso-auth",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"userName\": \"TestUser\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}{{namespace}}/v1/delete-database-user",
-							"host": [
-								"{{url}}{{namespace}}"
-							],
-							"path": [
-								"v1",
-								"delete-database-user"
 							]
 						}
 					},
@@ -2889,7 +2737,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Person\",\r\n   \"records\": [\r\n      {\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Person_f59376c1-1a63-4d27-a33b-ab356c380a02\"\r\n      }\r\n   ]\r\n}",
+							"raw": "{\r\n   \"cls\": \"http://ont.enapso.com/dotnetpro#Person\",\r\n   \"records\": [\r\n      {\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Person_f59376c1-1a63-4d27-a33b-ab356c380a02\"\r\n      }\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4690,7 +4538,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n       \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#EditorialObject\"\r\n\r\n}",
+							"raw": "{\r\n       \"cls\": \"http://ont.enapso.com/dotnetpro#Person\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4751,7 +4599,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Person\",\r\n   \"records\": [\r\n      {\r\n         \"givenName\": \"Alexander\",\r\n         \"familyName\": \"Schulze\",\r\n         \"age\": 55\r\n\r\n      }\r\n   ]\r\n}",
+							"raw": "{\r\n   \"cls\": \"http://ont.enapso.com/dotnetpro#Person\",\r\n   \"records\": [\r\n      {\r\n         \"givenName\": \"Alexander\",\r\n         \"familyName\": \"Schulze\",\r\n         \"age\": 55\r\n\r\n      }\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4800,7 +4648,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Person\",\r\n   \"records\": [\r\n      {\r\n         \"age\": 55,\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Truck_04e79796-838b-4152-89bf-5e12efe7b38d\"\r\n      }\r\n   ]\r\n}",
+							"raw": "{\r\n   \"cls\": \"http://ont.enapso.com/dotnetpro#Person\",\r\n   \"records\": [\r\n      {\r\n         \"age\": 55,\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Truck_04e79796-838b-4152-89bf-5e12efe7b38d\"\r\n      }\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4849,7 +4697,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"cls\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Person\",\r\n   \"records\": [\r\n      {\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Person_7b9e5986-c0a8-41a8-bcaa-c732f9ea1d38\"\r\n      }\r\n   ]\r\n}",
+							"raw": "{\r\n   \"cls\": \"http://ont.enapso.com/dotnetpro#Person\",\r\n   \"records\": [\r\n      {\r\n         \"iri\": \"http://ont.enapso.com/dotnetpro#Person_7b9e5986-c0a8-41a8-bcaa-c732f9ea1d38\"\r\n      }\r\n   ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4883,6 +4731,639 @@
 							"    pm.collectionVariables.set(\"namespace\", \"/enapso-dev/sparql-assistant\");",
 							"",
 							"}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "View Management Service",
+			"item": [
+				{
+					"name": "SPARQL Template Management Service",
+					"item": [
+						{
+							"name": "Read SPARQL Template",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/read-template",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"read-template"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read SPARQL Template and assigned variable name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"template\": \"http://ont.telekom.de/cia/sparql-template#SPARQLTemplate_e5e398b0-f9de-417a-b5c1-39f793f30f9d\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/execute-template",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"execute-template"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create SPARQL Template",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"records\": [\r\n        {\r\n           \r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/create-template",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"create-template"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update an existing SPARQL Template",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"records\": [\r\n        {\r\n         \"iri\": \"http://ont.enapso.de/test/sparql-template#SPARQLTemplate_017bc739-b3d3-4038-879a-a96da68f06f8\",\r\n            \"template\": \" `select ?iri ?templateName ?SPARQLTemplate ?templateDescription  (concat('[',group_concat(concat('{', concat('iri',':',str(?hasTemplateVariables)),',',concat('description',':',?templateDescription),',',concat('name',':',  concat('\\\"',?variableName,'\\\"'))    ,'}');  separator=', '),' ]') as ?templateVariableNames)  where { ?iri rdf:type env:SPARQLTemplate . optional{ ?iri env:name ?templateName.} optional{?iri env:template ?SPARQLTemplate.} optional {  ?iri env:description ?templateDescription. } optional {  ?iri env:hasTemplateVariables ?hasTemplateVariables.     ?hasTemplateVariables env:name ?variableName.  }    } group by ?iri ?templateName ?SPARQLTemplate ?templateDescription`\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/update-template",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"update-template"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete an existing SPARQL Template",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#SPARQLTemplate_00a5e37f_3452_4b4ghj8\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/delete-template",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"delete-template"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Variable Management Service",
+					"item": [
+						{
+							"name": "Read variable",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"filter\": [\r\n        {\r\n            \"key\": \"$sparql\",\r\n            \"value\": \"regEx(str(?ind), \\\"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\\\", \\\"i\\\")\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/read-variable",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"read-variable"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create variable",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\",\r\n            \"name\": \"name\",\r\n            \"description\": \"pass predicate iri\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/create-variable",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"create-variable"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update an existing variable",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\",\r\n            \"description\": \"pass the iri of predicate\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/update-variable",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"update-variable"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete an existing variable",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-enapso-auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"records\": [\r\n        {\r\n            \"iri\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj8\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}{{namespace}}/v1/delete-variable",
+									"host": [
+										"{{url}}{{namespace}}"
+									],
+									"path": [
+										"v1",
+										"delete-variable"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Add variable to SPARQL template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-enapso-auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"template\": \"http://ont.enapso.com/views#SPARQLTemplate_00a5e37f_3452_4b4ghj3\",\r\n    \"variable\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4g3j8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{namespace}}/v1/add-variable-to-template",
+							"host": [
+								"{{url}}{{namespace}}"
+							],
+							"path": [
+								"v1",
+								"add-variable-to-template"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove variable from SPARQL template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-enapso-auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"template\": \"http://ont.enapso.com/views#SPARQLTemplate_00a5e37f_3452_4b4ghj7\",\r\n    \"variable\": \"http://ont.enapso.com/views#TemplateVariable_00a6532_3452_4b4ghj3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{namespace}}/v1/remove-variable-from-template",
+							"host": [
+								"{{url}}{{namespace}}"
+							],
+							"path": [
+								"v1",
+								"remove-variable-from-template"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute SPARQL Template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-enapso-auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"template\": \"http://ont.enapso.de/test/sparql-template#SPARQLTemplate_d2f818b8-0199-46ab-bd8a-a02b670dbdsc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{namespace}}/v1/execute-template",
+							"host": [
+								"{{url}}{{namespace}}"
+							],
+							"path": [
+								"v1",
+								"execute-template"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"if(pm.environment.get(\"ngnix\") == \"false\"){",
+							"pm.collectionVariables.set(\"namespace\", \":3009\");",
+							"",
+							"}else{",
+							"",
+							"    pm.collectionVariables.set(\"namespace\", \"/enapso-dev/view-management\");",
+							"",
+							"}",
+							"",
+							"",
+							""
 						]
 					}
 				},
