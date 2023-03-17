@@ -16,7 +16,7 @@
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://github.com/innotrade/enapso-community/wiki">Documentation</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://github.com/innotrade/enapso-community/discussions">Discussion</a>
+  <a href="https://github.com/innotrade/enapso-community/issues">Discussion</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://www.facebook.com/InnotradeGmbH/">Facebook</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
