@@ -4829,7 +4829,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"template\": \"http://ont.telekom.de/cia/sparql-template#SPARQLTemplate_e5e398b0-f9de-417a-b5c1-39f793f30f9d\"\r\n}",
+									"raw": "{\r\n    \"template\": \"http://ont.enapso.de/cia/sparql-template#SPARQLTemplate_e5e398b0-f9de-417a-b5c1-39f793f30f9d\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
