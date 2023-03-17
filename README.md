@@ -18,11 +18,11 @@
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://github.com/innotrade/enapso-community/discussions">Discussion</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="#">Facebook</a>
+  <a href="https://www.facebook.com/InnotradeGmbH/">Facebook</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="#">Twitter</a>
+  <a href="https://twitter.com/innotrade?lang=en">Twitter</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="#">LinkedIn</a>
+  <a href="https://de.linkedin.com/company/innotrade-gmbh">LinkedIn</a>
   <br />
   <hr />
 </div>
@@ -53,7 +53,7 @@ To get started with ENAPSO, follow these simple steps:
 2. Select the appropriate environment based on your requirements:
     * If you want to test the functionalities of our platform, use the  [**Consumer Environment**](https://raw.githubusercontent.com/innotrade/enapso-community/main/ENAPSO-Cloud%20(Consumer).postman_environment.json)(open the link and then right-click select "Save As" to save the file). This environment provides read-only rights and is perfect for testing and evaluating ENAPSO before using it in your own applications. Note that this environment is running in our cloud.
     * If you want your own isolated tenant to work with your own data, fill out [this form](https://www.innotrade.com/enapso-tenant-registration) to request access to a tenant. Our support team will assist you in setting it up, and the tenant will be available as a 2-week trial for you to test the functionality. Note that this environment is also running in our cloud.
-    * If you want to operate ENAPSO on-premises, such as running it locally in your own Docker Compose or Kubernetes environment, contact us at support@innotrade.de, and we can provide you with the credentials to access the images through our container registry. To learn more about how you can deploy ENAPSO services locally, you can follow this [link](https://github.com/innotrade/enapso-community/wiki/ENAPSO-Platform-Services-on-On-Premises-Solutions-with-Kubernetes-and-Docker-Compose).
+    * If you want to operate ENAPSO on-premises, such as running it locally in your own Docker instance or Kubernetes environment, contact us at support@innotrade.de, and we can provide you with the credentials to access the images through our container registry. To learn more about how you can deploy ENAPSO services locally, you can follow this [link](https://github.com/innotrade/enapso-community/wiki/ENAPSO-Platform-Services-on-On-Premises-Solutions-with-Kubernetes-and-Docker-Compose).
 
 3. Authenticate yourself by executing the login call. The token returned in the response will automatically be stored in an environment variable.
 
